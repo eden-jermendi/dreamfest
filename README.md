@@ -1,68 +1,81 @@
 # DreamFest
 
-DreamFest is a full-stack festival management app for organising locations and events across a multi-day music and wellbeing festival.
-
-This project focuses on the backend database and route integration needed to manage festival scheduling data. It allows organisers to view locations, view events by day, add new events, edit locations, edit events, and delete events.
+Full-stack festival management app for organising locations and events across a multi-day music and wellbeing festival.
 
 ## Overview
 
-DreamFest simulates an admin tool for a three-day festival with activities such as yoga, meditation, workshops, arts and crafts, food vendors, and live music.
+DreamFest is an admin tool for managing a three-day festival schedule. Organisers can view locations, manage events, and update festival data in real time.
 
-The frontend UI, basic routing structure, and initial seeded database were provided as part of the original challenge brief. My work focused on implementing the application logic and database functionality that connects the existing routes and UI to real data.
+The frontend UI, routes, and initial database schema were provided. I implemented the backend logic and database functionality to make the application fully functional.
 
-## What I implemented
+## What I built
 
-I completed the project through the event editing functionality and built the core data-handling features needed to make the app functional.
+- Implemented database access layer using Knex  
+- Connected Express routes to real database queries  
+- Built full CRUD functionality for events  
+- Implemented read + update functionality for locations  
+- Joined events and locations data for schedule views  
+- Ensured API responses matched frontend expectations  
 
-### Completed features
+## Features
 
-- Display all festival locations from the database
-- Display events by day using joined event and location data
-- Load individual location data for editing
-- Update location records in the database
-- Add new events
-- Delete events
-- Load individual event data for editing
-- Update existing events
+### Locations
+- View all locations  
+- Edit location details  
 
-## My contribution
-
-My main work on this project included:
-
-- Writing database access functions for locations and events
-- Connecting Express routes to real database queries
-- Implementing CRUD-style backend functionality for event and location management
-- Handling joined data between `events` and `locations`
-- Returning correctly shaped API data for the existing frontend
-- Completing functionality that had previously been hard-coded or left as TODOs
+### Events
+- View events by day  
+- Add new events  
+- Edit existing events  
+- Delete events  
+- Load event data by ID  
 
 ## Tech stack
 
-- Node.js
-- Express
-- TypeScript / JavaScript
-- Knex.js
-- SQLite3
-- React
-- React Query
-
-## Key backend functionality
-
-### Locations
-- Get all locations
-- Get a location by ID
-- Update a location
-
-### Events
-- Get events by day
-- Get an event by ID
-- Add a new event
-- Update an event
-- Delete an event
+- Node.js  
+- Express  
+- TypeScript / JavaScript  
+- Knex.js  
+- SQLite3  
+- React  
+- React Query  
 
 ## Project structure
 
-```text
-client/     # React frontend
-server/     # Express routes and server logic
-db/         # Database functions, migrations, and seeds
+    client/   # React frontend
+    server/   # Express routes and API logic
+    db/       # Database functions, migrations, seeds
+
+## Running locally
+
+    git clone https://github.com/eden-jermendi/dreamfest.git
+    cd dreamfest
+    npm install
+    npm run knex migrate:latest
+    npm run knex seed:run
+    npm run dev
+
+## Why this project
+
+This project demonstrates my ability to:
+
+- Work within an existing codebase  
+- Implement backend logic for real features  
+- Write and integrate database queries  
+- Handle relational data and joins  
+- Connect backend systems to a frontend UI  
+
+## Notes
+
+This project began as a Dev Academy challenge. The UI, routes, and database structure were provided; all backend functionality and data integration were implemented by me.
+
+## Future improvements
+
+- Add location creation and deletion  
+- Improve test coverage  
+- Add validation and error handling  
+- Deploy the application  
+
+## Author
+
+Eden Jermendi
